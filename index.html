@@ -79,12 +79,16 @@
 
         .modal-content {
             margin: auto;
-            display: block;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
             width: 80%;
             max-width: 800px;
             padding: 20px;
-            border: 1px solid #888;
-            border-radius: 8px;
+            border: 10px solid #ff99cc; /* Borde rosa más grueso */
+            border-radius: 20px; /* Bordes redondeados */
+            background-color: #ffe6f2; /* Fondo rosa */
         }
 
         .close {
@@ -102,9 +106,11 @@
         }
 
         .modal-content img {
-            width: 70%; /* Ajuste al 70% del tamaño original */
+            width: 100%;
             height: auto;
             border-radius: 8px;
+            display: block;
+            margin: 0 auto; /* Centrar horizontalmente */
         }
 
         .galeria img.clicked {
@@ -169,13 +175,31 @@
         function openModal(imgSrc) {
             var modal = document.getElementById('myModal');
             var modalImg = document.getElementById('modalImg');
+            
+            // Aplicar transición de desvanecimiento gradual al modal
             modal.style.display = "block";
+            modal.style.opacity = 0;
+            setTimeout(function() {
+                modal.style.opacity = 1;
+            }, 100); // Ajusta el tiempo de espera según sea necesario
+            
+            // Aplicar transición de desplazamiento suave a la imagen
+            modalImg.style.transform = "scale(0.8)";
+            setTimeout(function() {
+                modalImg.style.transform = "scale(1)";
+            }, 100); // Ajusta el tiempo de espera según sea necesario
+            
             modalImg.src = imgSrc;
         }
 
         function closeModal() {
             var modal = document.getElementById('myModal');
-            modal.style.display = "none";
+            
+            // Aplicar transición de desvanecimiento gradual al cerrar el modal
+            modal.style.opacity = 0;
+            setTimeout(function() {
+                modal.style.display = "none";
+            }, 300); // Ajusta el tiempo de espera según sea necesario
         }
     </script>
 </body>
