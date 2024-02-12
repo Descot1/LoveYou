@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>-------</title>
+    <title>Título de tu Página</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-image: url('https://c4.wallpaperflare.com/wallpaper/853/945/279/anime-just-because-city-sunset-hd-wallpaper-preview.jpg');
+            background-image: url('https://static.vecteezy.com/system/resources/previews/032/400/527/non_2x/seamless-vector-traditional-yellow-background-checkered-pattern-or-grid-texture-for-web-design-desktop-wallpaper-or-culinary-blog-website-free-photo.jpg');
             background-size: cover;
             background-position: center center;
             background-attachment: fixed;
@@ -28,7 +28,7 @@
             width: 100%;
             text-align: center;
             padding: 20px;
-            background-color: rgba(51, 51, 51, 0.7); /* Fondo semi-transparente para legibilidad del encabezado */
+            background-color: rgba(240, 118, 126, 0.7); /* Color del título con transparencia */
         }
 
         section {
@@ -120,15 +120,42 @@
         .spotify-widget {
             border-radius: 12px;
         }
+
+        /* CSS para la sección central */
+        #imagen-central {
+            flex: 1;
+            margin: 20px;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        /* CSS para la sección de mensajitos */
+        #mensajitos {
+            margin-top: 20px;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        /* Contenedor para las secciones de Spotify y Mensajitos */
+        #columna-derecha {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
     </style>
 </head>
 <body>
 
     <header>
-        <h1>------</h1>
+        <h1>Título de tu Página</h1>
     </header>
 
-    <!-- Sección de Recuerdos (a la izquierda) -->
+    <!-- Sección de Recuerdos (a la izquierda) -->	
     <section id="fotos">
         <h2>Fotos</h2>
         <div class="galeria">
@@ -150,24 +177,31 @@
         </div>
     </section>
 
-    <!-- Sección de Playlist de Spotify (a la derecha) -->
-    <section id="playlist" class="playlist">
-        <h2>Playlist de Spotify</h2>
-        <!-- Agrega los iframes de Spotify -->
-        <div class="spotify-widget">
-            <iframe src="https://open.spotify.com/embed/playlist/43N5aD7YVyxa9O6rwgHkL6?utm_source=generator" width="100%" height="352" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+    <!-- Sección de Central con Imagen Vertical -->
+    <section id="imagen-central">
+        <h2>Imagen Central</h2>
+        <div>
+            <img src="url_de_tu_imagen_vertical.jpg" alt="Imagen Vertical">
         </div>
     </section>
 
-    <!-- Sección de Reproducción de Audios (a la derecha) -->
-    <section id="audios" class="audios">
-        <h2>------</h2>
-        <audio controls>
-            <source src="audio1.mp3" type="audio/mp3">
-            Tu navegador no soporta la etiqueta de audio.
-        </audio>
-        <!-- Agrega más etiquetas 'audio' según sea necesario -->
-    </section>
+    <!-- Contenedor para las secciones de Spotify y Mensajitos -->
+    <div id="columna-derecha">
+        <!-- Sección de Playlist de Spotify (a la derecha) -->
+        <section id="playlist" class="playlist">
+            <h2>Playlist de Spotify</h2>
+            <!-- Agrega los iframes de Spotify -->
+            <div class="spotify-widget">
+                <iframe src="https://open.spotify.com/embed/playlist/43N5aD7YVyxa9O6rwgHkL6?utm_source=generator" width="100%" height="352" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+            </div>
+        </section>
+
+        <!-- Sección de Mensajitos -->
+        <section id="mensajitos">
+            <h2>Mensajitos</h2>
+            <p>Aquí puedes agregar tus mensajes especiales.</p>
+        </section>
+    </div>
 
     <!-- Otras secciones -->
 
