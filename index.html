@@ -127,7 +127,7 @@
         }
 
         .modal-content img {
-            width: 100%;
+            max-width: 100%;
             height: auto;
             border-radius: 8px;
             display: block;
@@ -205,7 +205,7 @@
 <section id="imagen-central">
     <h2>Carta de mi Corazón 💖</h2>
     <div>
-        <img src="https://media.discordapp.net/attachments/1205308638470864946/1207135110000807986/Agregar_un_titulo.png?ex=65de8b2d&is=65cc162d&hm=78f753615543a5e6874165ce5ca37158bcfa9fcf3ca9bc9f8eae6255f64a427e&=&format=webp&quality=lossless&width=363&height=473" alt="Imagen Central">
+        <img src="https://media.discordapp.net/attachments/1205308638470864946/1207135110000807986/Agregar_un_titulo.png?ex=65de8b2d&is=65cc162d&hm=78f753615543a5e6874165ce5ca37158bcfa9fcf3ca9bc9f8eae6255f64a427e&=&format=webp&quality=lossless&width=363&height=473" alt="Imagen Central" onclick="openModal('https://media.discordapp.net/attachments/1205308638470864946/1207135110000807986/Agregar_un_titulo.png?ex=65de8b2d&is=65cc162d&hm=78f753615543a5e6874165ce5ca37158bcfa9fcf3ca9bc9f8eae6255f64a427e&=&format=webp&quality=lossless&width=363&height=473')">
     </div>
 </section>
 
@@ -226,10 +226,6 @@
         modal.style.opacity = 0;
         setTimeout(function() {
             modal.style.opacity = 1;
-        }, 100);
-        modalImg.style.transform = "scale(0.8)";
-        setTimeout(function() {
-            modalImg.style.transform = "scale(1)";
         }, 100);
         modalImg.src = imgSrc;
     }
