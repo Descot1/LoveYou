@@ -22,6 +22,7 @@
             margin-left: auto;
             margin-right: auto;
             color: white; /* Ajusta el color del texto para mayor legibilidad */
+            position: relative; /* Establecer posición relativa para los corazones */
         }
 
         header {
@@ -44,19 +45,24 @@
             text-align: center;
         }
 
+        .galeria-container {
+            height: 400px; /* Altura fija del contenedor */
+            overflow-y: scroll; /* Slider vertical */
+        }
+
         .galeria {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
-            grid-gap: 10px;
-            justify-items: center;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
             align-items: center;
-            margin-top: 20px;
+            padding-right: 20px; /* Ajuste para la barra de desplazamiento */
         }
 
         .galeria img {
-            width: 100%;
+            width: 100px; /* Tamaño de las previsualizaciones */
             height: auto;
-            border-radius: 8px;
+            border-radius: 12px; /* Borde redondeado */
+            margin: 10px; /* Espacio entre las previsualizaciones */
             transition: transform 0.3s ease-in-out;
         }
 
@@ -131,110 +137,119 @@
             text-align: center;
         }
 
-        /* CSS para la sección de mensajitos */
-        #mensajitos {
-            margin-top: 20px;
-            padding: 20px;
-            background-color: rgba(255, 255, 255, 0.8);
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            text-align: center;
+        /* CSS para los corazones */
+        .heart {
+            position: absolute;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23ff69b4'%3E%3Cpath d='M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-size: contain;
+            width: 30px;
+            height: 30px;
+            animation: fall 10s linear infinite;
         }
 
-        /* Contenedor para las secciones de Spotify y Mensajitos */
-        #columna-derecha {
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+        @keyframes fall {
+            0% {
+                top: -30px;
+                opacity: 1;
+            }
+            100% {
+                top: 100vh;
+                opacity: 0;
+            }
         }
     </style>
 </head>
 <body>
 
-    <header>
-        <h1></h1>
-    </header>
+<header>
+    <h1></h1>
+</header>
 
-    <!-- Sección de Recuerdos (a la izquierda) -->	
-    <section id="fotos">
-        <h2>Fotos</h2>
+<!-- Sección de Recuerdos (a la izquierda) -->
+<section id="fotos">
+    <h2>Fotos</h2>
+    <div class="galeria-container">
         <div class="galeria">
             <img src="https://media.discordapp.net/attachments/1205308638470864946/1205308721463435325/image.png?ex=65d7e638&is=65c57138&hm=ca90c0d5f1bc77746e931f8bd7958e3d9721f452c627c545a70a128a17ce8ee8&=&format=webp&quality=lossless&width=842&height=473" alt="Foto 1" onclick="openModal('https://media.discordapp.net/attachments/1205308638470864946/1205308721463435325/image.png?ex=65d7e638&is=65c57138&hm=ca90c0d5f1bc77746e931f8bd7958e3d9721f452c627c545a70a128a17ce8ee8&=&format=webp&quality=lossless&width=842&height=473')">
             <img src="https://media.discordapp.net/attachments/1205308638470864946/1205308759715618847/image.png?ex=65d7e641&is=65c57141&hm=ff6e81994f30c63074ac563649b60d9636409dce2b9b43a9b8eeec6eceebd546&=&format=webp&quality=lossless&width=842&height=473" alt="Foto 2" onclick="openModal('https://media.discordapp.net/attachments/1205308638470864946/1205308759715618847/image.png?ex=65d7e641&is=65c57141&hm=ff6e81994f30c63074ac563649b60d9636409dce2b9b43a9b8eeec6eceebd546&=&format=webp&quality=lossless&width=842&height=473')">
             <img src="https://media.discordapp.net/attachments/1205308638470864946/1206481757143175198/asd.png?ex=65dc2ab2&is=65c9b5b2&hm=f754ac56c6048245f64c6a16106dddf9d903bfbf8e501e2bb9abc5c31c22c2e1&=&format=webp&quality=lossless" alt="Foto 3" onclick="openModal('https://media.discordapp.net/attachments/1205308638470864946/1206481757143175198/asd.png?ex=65dc2ab2&is=65c9b5b2&hm=f754ac56c6048245f64c6a16106dddf9d903bfbf8e501e2bb9abc5c31c22c2e1&=&format=webp&quality=lossless')">
-            <img src="https://media.discordapp.net/attachments/1205308638470864946/1206481630076735518/image.png?ex=65dc2a93&is=65c9b593&hm=4153b0411ddc4f431ec1100a0db6cc5a386b2826373e1a82dec0aaac544a76c2&=&format=webp&quality=lossless&width=996&height=473" alt="Foto 4" onclick="openModal('https://media.discordapp.net/attachments/1205308638470864946/1206481630076735518/image.png?ex=65dc2a93&is=65c9b593&hm=4153b0411ddc4f431ec1100a0db6cc5a386b2826373e1a82dec0aaac544a76c2&=&format=webp&quality=lossless&width=996&height=473')">
-            <img src="https://media.discordapp.net/attachments/1205308638470864946/1206481959602094100/asda.png?ex=65dc2ae2&is=65c9b5e2&hm=4c7c96cdf7bca7ddac5cf90889e4b5c9300df532755b1d2d998cae01d63abb93&=&format=webp&quality=lossless" alt="Foto 5" onclick="openModal('https://media.discordapp.net/attachments/1205308638470864946/1206481959602094100/asda.png?ex=65dc2ae2&is=65c9b5e2&hm=4c7c96cdf7bca7ddac5cf90889e4b5c9300df532755b1d2d998cae01d63abb93&=&format=webp&quality=lossless')">
-            <img src="https://via.placeholder.com/150" alt="Foto 6" onclick="openModal('https://via.placeholder.com/500')">
-            <img src="https://via.placeholder.com/150" alt="Foto 7" onclick="openModal('https://via.placeholder.com/500')">
-            <!-- Puedes cambiar las URLs de las imágenes por las reales -->
+            <img src="https://media.discordapp.net/attachments/1205308638470864946/1206481959602094100/asda.png?ex=65dc2ae2&is=65c9b5e2&hm=4c7c96cdf7bca7ddac5cf90889e4b5c9300df532755b1d2d998cae01d63abb93&=&format=webp&quality=lossless" alt="Foto 4" onclick="openModal('https://media.discordapp.net/attachments/1205308638470864946/1206481959602094100/asda.png?ex=65dc2ae2&is=65c9b5e2&hm=4c7c96cdf7bca7ddac5cf90889e4b5c9300df532755b1d2d998cae01d63abb93&=&format=webp&quality=lossless')">
+            <!-- Agregar más imágenes aquí -->
         </div>
-        <!-- Modal -->
-        <div id="myModal" class="modal">
-            <span class="close" onclick="closeModal()">&times;</span>
-            <div class="modal-content">
-                <img id="modalImg" src="">
-            </div>
-        </div>
-    </section>
-
-    <!-- Sección de Central con Imagen Vertical -->
-    <section id="imagen-central">
-        <h2>Imagen Central</h2>
-        <div>
-            <img src="url_de_tu_imagen_vertical.jpg" alt="Imagen Vertical">
-        </div>
-    </section>
-
-    <!-- Contenedor para las secciones de Spotify y Mensajitos -->
-    <div id="columna-derecha">
-        <!-- Sección de Playlist de Spotify (a la derecha) -->
-        <section id="playlist" class="playlist">
-            <h2>Playlist de Spotify</h2>
-            <!-- Agrega los iframes de Spotify -->
-            <div class="spotify-widget">
-                <iframe src="https://open.spotify.com/embed/playlist/43N5aD7YVyxa9O6rwgHkL6?utm_source=generator" width="100%" height="352" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-            </div>
-        </section>
-
-        <!-- Sección de Mensajitos -->
-        <section id="mensajitos">
-            <h2>Mensajitos</h2>
-            <p>Aquí puedes agregar tus mensajes especiales.</p>
-        </section>
     </div>
+    <!-- Modal -->
+    <div id="myModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <div class="modal-content">
+            <img id="modalImg" src="">
+        </div>
+    </div>
+</section>
 
-    <!-- Otras secciones -->
+<!-- Sección de Central con Imagen Vertical -->
+<section id="imagen-central">
+    <h2>Imagen Central</h2>
+    <div>
+        <img src="https://media.discordapp.net/attachments/1205308638470864946/1207127872712482836/Agregar_un_titulo_2.png?ex=65de8470&is=65cc0f70&hm=230ad346a629c70f8370bca2f60fac1c55a4441ea04b8abeac06a86b3d65b643&=&format=webp&quality=lossless&width=363&height=473" alt="Imagen Central">
+    </div>
+</section>
 
-    <script>
-        function openModal(imgSrc) {
-            var modal = document.getElementById('myModal');
-            var modalImg = document.getElementById('modalImg');
-            
-            // Aplicar transición de desvanecimiento gradual al modal
-            modal.style.display = "block";
-            modal.style.opacity = 0;
-            setTimeout(function() {
-                modal.style.opacity = 1;
-            }, 100); // Ajusta el tiempo de espera según sea necesario
-            
-            // Aplicar transición de desplazamiento suave a la imagen
-            modalImg.style.transform = "scale(0.8)";
-            setTimeout(function() {
-                modalImg.style.transform = "scale(1)";
-            }, 100); // Ajusta el tiempo de espera según sea necesario
-            
-            modalImg.src = imgSrc;
-        }
+<!-- Contenedor para la sección de Spotify -->
+<div id="columna-derecha">
+ 
+    <section id="playlist" class="playlist">
+        <h2>Playlist de Spotify</h2>
+        <div class="spotify-widget">
+            <iframe src="https://open.spotify.com/embed/playlist/43N5aD7YVyxa9O6rwgHkL6?utm_source=generator" width="100%" height="352" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        </div>
+    </section>
+</div>
 
-        function closeModal() {
-            var modal = document.getElementById('myModal');
-            
-            // Aplicar transición de desvanecimiento gradual al cerrar el modal
-            modal.style.opacity = 0;
-            setTimeout(function() {
-                modal.style.display = "none";
-            }, 300); // Ajusta el tiempo de espera según sea necesario
-        }
-    </script>
+
+<script>
+    function openModal(imgSrc) {
+        var modal = document.getElementById('myModal');
+        var modalImg = document.getElementById('modalImg');
+
+        // Aplicar transición de desvanecimiento gradual al modal
+        modal.style.display = "block";
+        modal.style.opacity = 0;
+        setTimeout(function() {
+            modal.style.opacity = 1;
+        }, 100); // Ajusta el tiempo de espera según sea necesario
+
+        // Aplicar transición de desplazamiento suave a la imagen
+        modalImg.style.transform = "scale(0.8)";
+        setTimeout(function() {
+            modalImg.style.transform = "scale(1)";
+        }, 100); // Ajusta el tiempo de espera según sea necesario
+
+        modalImg.src = imgSrc;
+    }
+
+    function closeModal() {
+        var modal = document.getElementById('myModal');
+
+        // Aplicar transición de desvanecimiento gradual al cerrar el modal
+        modal.style.opacity = 0;
+        setTimeout(function() {
+            modal.style.display = "none";
+        }, 300); // Ajusta el tiempo de espera según sea necesario
+    }
+
+    // Generación de corazones aleatorios
+    setInterval(function() {
+        var heart = document.createElement("div");
+        heart.className = "heart";
+        heart.style.left = Math.random() * 100 + "vw";
+        heart.style.animationDuration = Math.random() * 5 + 5 + "s"; // Modificado para ralentizar la velocidad de caída
+        document.body.appendChild(heart);
+        setTimeout(function() {
+            heart.remove();
+        }, 10000); // Modificado para aumentar el tiempo de vida del corazón
+    }, 1000); // Frecuencia de aparición de los corazones
+</script>
+
 </body>
 </html>
