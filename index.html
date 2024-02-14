@@ -3,41 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Título de tu Página</title>
+    <title>TE AMO AMOR ❤️</title>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Pacifico', cursive;
             margin: 0;
             padding: 0;
             background-image: url('https://static.vecteezy.com/system/resources/previews/032/400/527/non_2x/seamless-vector-traditional-yellow-background-checkered-pattern-or-grid-texture-for-web-design-desktop-wallpaper-or-culinary-blog-website-free-photo.jpg');
             background-size: cover;
             background-position: center center;
             background-attachment: fixed;
-            background-repeat: no-repeat; /* Evitar que la imagen de fondo se repita */
+            background-repeat: no-repeat;
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
             align-items: flex-start;
-            max-width: 1200px; /* Máximo ancho de la página */
+            max-width: 1200px;
             margin-left: auto;
             margin-right: auto;
-            color: white; /* Ajusta el color del texto para mayor legibilidad */
-            position: relative; /* Establecer posición relativa para los corazones */
+            color: white;
+            position: relative;
         }
 
         header {
             width: 100%;
             text-align: center;
             padding: 20px;
-            background-color: rgba(240, 118, 126, 0.7); /* Color del título con transparencia */
+            background-color: rgba(240, 118, 126, 0.7);
+            border-radius: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.7); /* Efecto RGB */
+        }
+
+        header h1 {
+            border: 2px solid white;
+            border-radius: 20px;
+            padding: 10px 20px;
+            display: inline-block;
+            text-shadow: 0 0 10px rgba(240, 2, 232, 0.7); /* Efecto RGB */
         }
 
         section {
             flex: 1;
             margin: 20px;
             padding: 20px;
-            background-color: rgba(255, 255, 255, 0.8); /* Fondo semi-transparente para legibilidad del contenido */
+            background-color: rgba(240, 2, 232, 0.8);
+            border-radius: 20px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background: linear-gradient(45deg, #ff84b7, #ff8a89, #ffa177, #ffd573, #dbfc85, #a3fdc4);
         }
 
         h2 {
@@ -46,8 +60,8 @@
         }
 
         .galeria-container {
-            height: 400px; /* Altura fija del contenedor */
-            overflow-y: scroll; /* Slider vertical */
+            height: 400px;
+            overflow-y: scroll;
         }
 
         .galeria {
@@ -55,14 +69,14 @@
             flex-wrap: wrap;
             justify-content: center;
             align-items: center;
-            padding-right: 20px; /* Ajuste para la barra de desplazamiento */
+            padding-right: 20px;
         }
 
         .galeria img {
-            width: 100px; /* Tamaño de las previsualizaciones */
+            width: 100px;
             height: auto;
-            border-radius: 12px; /* Borde redondeado */
-            margin: 10px; /* Espacio entre las previsualizaciones */
+            border-radius: 12px;
+            margin: 10px;
             transition: transform 0.3s ease-in-out;
         }
 
@@ -92,9 +106,9 @@
             width: 80%;
             max-width: 800px;
             padding: 20px;
-            border: 10px solid #ff99cc; /* Borde rosa más grueso */
-            border-radius: 20px; /* Bordes redondeados */
-            background-color: #ffe6f2; /* Fondo rosa */
+            border: 10px solid #ff99cc;
+            border-radius: 20px;
+            background-color: #ffe6f2;
         }
 
         .close {
@@ -116,7 +130,7 @@
             height: auto;
             border-radius: 8px;
             display: block;
-            margin: 0 auto; /* Centrar horizontalmente */
+            margin: 0 auto;
         }
 
         .galeria img.clicked {
@@ -125,6 +139,7 @@
 
         .spotify-widget {
             border-radius: 12px;
+            background-color: #ffb3d9;
         }
 
         /* CSS para la sección central */
@@ -132,8 +147,10 @@
             flex: 1;
             margin: 20px;
             padding: 20px;
-            background-color: rgba(255, 255, 255, 0.8);
+            background-color: rgba(240, 2, 232, 0.8);
+            border-radius: 20px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background: linear-gradient(45deg, #ff84b7, #ff8a89, #ffa177, #ffd573, #dbfc85, #a3fdc4);
             text-align: center;
         }
 
@@ -163,22 +180,19 @@
 <body>
 
 <header>
-    <h1></h1>
+    <h1>TE AMO AMOR ❤️</h1>
 </header>
 
-<!-- Sección de Recuerdos (a la izquierda) -->
 <section id="fotos">
-    <h2>Fotos</h2>
+    <h2>Álbum de Recuerdos <3</h2>
     <div class="galeria-container">
         <div class="galeria">
             <img src="https://media.discordapp.net/attachments/1205308638470864946/1205308721463435325/image.png?ex=65d7e638&is=65c57138&hm=ca90c0d5f1bc77746e931f8bd7958e3d9721f452c627c545a70a128a17ce8ee8&=&format=webp&quality=lossless&width=842&height=473" alt="Foto 1" onclick="openModal('https://media.discordapp.net/attachments/1205308638470864946/1205308721463435325/image.png?ex=65d7e638&is=65c57138&hm=ca90c0d5f1bc77746e931f8bd7958e3d9721f452c627c545a70a128a17ce8ee8&=&format=webp&quality=lossless&width=842&height=473')">
             <img src="https://media.discordapp.net/attachments/1205308638470864946/1205308759715618847/image.png?ex=65d7e641&is=65c57141&hm=ff6e81994f30c63074ac563649b60d9636409dce2b9b43a9b8eeec6eceebd546&=&format=webp&quality=lossless&width=842&height=473" alt="Foto 2" onclick="openModal('https://media.discordapp.net/attachments/1205308638470864946/1205308759715618847/image.png?ex=65d7e641&is=65c57141&hm=ff6e81994f30c63074ac563649b60d9636409dce2b9b43a9b8eeec6eceebd546&=&format=webp&quality=lossless&width=842&height=473')">
             <img src="https://media.discordapp.net/attachments/1205308638470864946/1206481757143175198/asd.png?ex=65dc2ab2&is=65c9b5b2&hm=f754ac56c6048245f64c6a16106dddf9d903bfbf8e501e2bb9abc5c31c22c2e1&=&format=webp&quality=lossless" alt="Foto 3" onclick="openModal('https://media.discordapp.net/attachments/1205308638470864946/1206481757143175198/asd.png?ex=65dc2ab2&is=65c9b5b2&hm=f754ac56c6048245f64c6a16106dddf9d903bfbf8e501e2bb9abc5c31c22c2e1&=&format=webp&quality=lossless')">
             <img src="https://media.discordapp.net/attachments/1205308638470864946/1206481959602094100/asda.png?ex=65dc2ae2&is=65c9b5e2&hm=4c7c96cdf7bca7ddac5cf90889e4b5c9300df532755b1d2d998cae01d63abb93&=&format=webp&quality=lossless" alt="Foto 4" onclick="openModal('https://media.discordapp.net/attachments/1205308638470864946/1206481959602094100/asda.png?ex=65dc2ae2&is=65c9b5e2&hm=4c7c96cdf7bca7ddac5cf90889e4b5c9300df532755b1d2d998cae01d63abb93&=&format=webp&quality=lossless')">
-            <!-- Agregar más imágenes aquí -->
         </div>
     </div>
-    <!-- Modal -->
     <div id="myModal" class="modal">
         <span class="close" onclick="closeModal()">&times;</span>
         <div class="modal-content">
@@ -187,68 +201,56 @@
     </div>
 </section>
 
-<!-- Sección de Central con Imagen Vertical -->
 <section id="imagen-central">
-    <h2>Imagen Central</h2>
+    <h2>Una Carta de mi Corazón 💖</h2>
     <div>
-        <img src="https://media.discordapp.net/attachments/1205308638470864946/1207127872712482836/Agregar_un_titulo_2.png?ex=65de8470&is=65cc0f70&hm=230ad346a629c70f8370bca2f60fac1c55a4441ea04b8abeac06a86b3d65b643&=&format=webp&quality=lossless&width=363&height=473" alt="Imagen Central">
+        <img src="https://media.discordapp.net/attachments/1205308638470864946/1207135110000807986/Agregar_un_titulo.png?ex=65de8b2d&is=65cc162d&hm=78f753615543a5e6874165ce5ca37158bcfa9fcf3ca9bc9f8eae6255f64a427e&=&format=webp&quality=lossless&width=363&height=473" alt="Imagen Central">
     </div>
 </section>
 
-<!-- Contenedor para la sección de Spotify -->
 <div id="columna-derecha">
- 
     <section id="playlist" class="playlist">
-        <h2>Playlist de Spotify</h2>
+        <h2>Music for My Love 🎶</h2>
         <div class="spotify-widget">
             <iframe src="https://open.spotify.com/embed/playlist/43N5aD7YVyxa9O6rwgHkL6?utm_source=generator" width="100%" height="352" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
         </div>
     </section>
 </div>
 
-
 <script>
     function openModal(imgSrc) {
         var modal = document.getElementById('myModal');
         var modalImg = document.getElementById('modalImg');
-
-        // Aplicar transición de desvanecimiento gradual al modal
         modal.style.display = "block";
         modal.style.opacity = 0;
         setTimeout(function() {
             modal.style.opacity = 1;
-        }, 100); // Ajusta el tiempo de espera según sea necesario
-
-        // Aplicar transición de desplazamiento suave a la imagen
+        }, 100);
         modalImg.style.transform = "scale(0.8)";
         setTimeout(function() {
             modalImg.style.transform = "scale(1)";
-        }, 100); // Ajusta el tiempo de espera según sea necesario
-
+        }, 100);
         modalImg.src = imgSrc;
     }
 
     function closeModal() {
         var modal = document.getElementById('myModal');
-
-        // Aplicar transición de desvanecimiento gradual al cerrar el modal
         modal.style.opacity = 0;
         setTimeout(function() {
             modal.style.display = "none";
-        }, 300); // Ajusta el tiempo de espera según sea necesario
+        }, 300);
     }
 
-    // Generación de corazones aleatorios
     setInterval(function() {
         var heart = document.createElement("div");
         heart.className = "heart";
         heart.style.left = Math.random() * 100 + "vw";
-        heart.style.animationDuration = Math.random() * 5 + 5 + "s"; // Modificado para ralentizar la velocidad de caída
+        heart.style.animationDuration = Math.random() * 5 + 5 + "s";
         document.body.appendChild(heart);
         setTimeout(function() {
             heart.remove();
-        }, 10000); // Modificado para aumentar el tiempo de vida del corazón
-    }, 1000); // Frecuencia de aparición de los corazones
+        }, 10000);
+    }, 1000);
 </script>
 
 </body>
